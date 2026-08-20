@@ -94,7 +94,7 @@ async function getAssetBuffer(relPath) {
   if (cleanName.includes('banner') && (cleanName.includes('tiw') || cleanName.includes('olevel') || cleanName.includes('workaholic'))) {
     cleanName = 'tiw-banner-new.png';
   } else if (cleanName.includes('logo') && (cleanName.includes('tiw') || cleanName.includes('olevel') || cleanName.includes('workaholic'))) {
-    cleanName = 'tiw-logo.png';
+    cleanName = 'tiw-logo.jpg';
   }
 
   if (memoryCache.has(cleanName)) {
