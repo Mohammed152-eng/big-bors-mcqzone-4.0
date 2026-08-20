@@ -87,14 +87,7 @@ async function getAssetBuffer(relPath) {
     return memoryCache.get(cleanName);
   }
 
-  // 1. If it's SVG or PNG logo/favicon, provide instant pristine MCQ monogram
-  if (cleanName === 'logo.svg' || cleanName === 'favicon.svg') {
-    const buf = Buffer.from(LOGO_SVG, 'utf8');
-    memoryCache.set(cleanName, buf);
-    return buf;
-  }
-
-  // 2. Check local disk
+  // 1. Check local disk first
   const diskPath = path.join(publicDir, cleanName);
   if (fs.existsSync(diskPath)) {
     const buf = fs.readFileSync(diskPath);
@@ -104,7 +97,7 @@ async function getAssetBuffer(relPath) {
     }
   }
 
-  // 3. Check built-in asset bundle
+  // 2. Check built-in asset bundle
   if (BUILTIN_ASSETS[cleanName]) {
     const buf = Buffer.from(BUILTIN_ASSETS[cleanName], 'base64');
     if (isBufferValidImage(buf)) {
