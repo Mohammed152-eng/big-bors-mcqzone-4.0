@@ -87,7 +87,7 @@ async function getAssetBuffer(relPath) {
     return memoryCache.get(cleanName);
   }
 
-  // 1. If it's SVG logo/favicon, provide instant pristine SVG
+  // 1. If it's SVG or PNG logo/favicon, provide instant pristine MCQ monogram
   if (cleanName === 'logo.svg' || cleanName === 'favicon.svg') {
     const buf = Buffer.from(LOGO_SVG, 'utf8');
     memoryCache.set(cleanName, buf);
@@ -118,7 +118,11 @@ async function getAssetBuffer(relPath) {
     }
   }
 
-  // 4. Remote CDN fallback if needed
+  // 4. Remote CDN fallback if needed (exclude brand logo which should always be MCQ monogram)
+  if (cleanName.includes('logo') || cleanName.includes('favicon') || cleanName.includes('apple-touch')) {
+    return null;
+  }
+
   try {
     const remoteUrl = `${REMOTE_ASSET_BASE}/${cleanName}`;
     const res = await fetch(remoteUrl, { headers: { 'User-Agent': 'Mozilla/5.0' } });

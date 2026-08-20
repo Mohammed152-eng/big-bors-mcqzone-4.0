@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
   <rect width="512" height="512" fill="#000000"/>
-  <g fill="none" stroke="#FFFFFF" stroke-width="41" stroke-linecap="round" stroke-linejoin="round">
+  <g fill="none" stroke="#FFFFFF" stroke-width="36" stroke-linecap="round" stroke-linejoin="round">
     <!-- M outer shape -->
     <path d="M 97 430 L 97 97 L 256 256 L 415 97 L 415 430" />
     <!-- C circular arc -->
