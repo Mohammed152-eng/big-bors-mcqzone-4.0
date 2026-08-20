@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1170" height="2532" viewBox="0 0 1170 2532">
+  <!-- Define fonts -->
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&amp;display=swap');
+      text { font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif; }
+    </style>
+  </defs>
+  
+  <!-- Background (light beige) -->
+  <rect width="1170" height="2532" fill="#F4EFE6"/>
+  
+  <!-- Main phone frame -->
+  <rect x="60" y="80" width="1050" height="2372" rx="80" fill="#FDFBF7" stroke="#1A1A1A" stroke-width="4"/>
+  
+  <!-- Status bar area -->
+  <g opacity="0.7">
+    <text x="100" y="160" fill="#1A1A1A" font-size="32" font-weight="700">9:41</text>
+    <text x="950" y="160" fill="#1A1A1A" font-size="32" font-weight="700">100%</text>
+  </g>
+  
+  <!-- Header -->
+  <rect x="100" y="220" width="970" height="90" rx="45" fill="#D1DDC2"/>
+  <text x="130" y="275" fill="#1A1A1A" font-size="38" font-weight="800" letter-spacing="2">QuickMark</text>
+  
+  <!-- Tab navigation (desktop style at top) -->
+  <rect x="100" y="360" width="970" height="85" rx="42" fill="rgba(255,255,255,0.6)" stroke="rgba(26,26,26,0.05)" stroke-width="2"/>
+  
+  <!-- Practice tab (active) -->
+  <g>
+    <rect x="115" y="375" width="300" height="55" rx="28" fill="rgba(209,221,194,0.15)" stroke="rgba(209,221,194,0.3)" stroke-width="2"/>
+    <text x="175" y="410" fill="#1A1A1A" font-size="24" font-weight="800" letter-spacing="1.5">PRACTICE</text>
+  </g>
+  
+  <!-- Topicals tab -->
+  <text x="465" y="410" fill="rgba(26,26,26,0.35)" font-size="24" font-weight="800" letter-spacing="1.5">TOPICALS</text>
+  
+  <!-- Ranked tab -->
+  <text x="740" y="410" fill="rgba(26,26,26,0.35)" font-size="24" font-weight="800" letter-spacing="1.5">RANKED</text>
+  
+  <!-- Continue where you left off card -->
+  <rect x="100" y="495" width="970" height="180" rx="32" fill="rgba(209,221,194,0.1)" stroke="rgba(209,221,194,0.3)" stroke-width="2"/>
+  
+  <!-- Icon circle -->
+  <rect x="130" y="525" width="56" height="56" rx="14" fill="rgba(209,221,194,0.2)"/>
+  <circle cx="158" cy="553" r="16" stroke="#D1DDC2" stroke-width="3" fill="none"/>
+  <path d="M 150 545 L 150 553 L 158 558" stroke="#D1DDC2" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Text content -->
+  <text x="210" y="552" fill="#1A1A1A" font-size="24" font-weight="900" letter-spacing="0.5">Continue where you left off</text>
+  <text x="210" y="580" fill="rgba(26,26,26,0.5)" font-size="20" font-weight="700">0625 W25 Paper 11 · 8 answered · 44:23 left</text>
+  
+  <!-- Resume button -->
+  <rect x="130" y="615" width="910" height="48" rx="24" fill="#1A1A1A" stroke="rgba(26,26,26,0.15)" stroke-width="2"/>
+  <polygon points="175,635 175,645 182,640" fill="#FDFBF7"/>
+  <text x="200" y="644" fill="#FDFBF7" font-size="22" font-weight="800" letter-spacing="1.5">RESUME PAPER</text>
+  
+  <!-- Selection header -->
+  <text x="100" y="740" fill="rgba(26,26,26,0.3)" font-size="22" font-weight="900" letter-spacing="4">SELECTION</text>
+  <line x1="310" y1="733" x2="1070" y2="733" stroke="rgba(26,26,26,0.05)" stroke-width="1"/>
+  
+  <!-- Board dropdown -->
+  <text x="100" y="805" fill="rgba(26,26,26,0.6)" font-size="20" font-weight="700" letter-spacing="2">BOARD</text>
+  <rect x="100" y="825" width="970" height="88" rx="24" fill="#FFFFFF" stroke="rgba(26,26,26,0.1)" stroke-width="2"/>
+  <text x="135" y="878" fill="#1A1A1A" font-size="32" font-weight="700">IGCSE / O-Level</text>
+  <path d="M 1020 860 L 1030 875 L 1040 860" stroke="#1A1A1A" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Subject dropdown -->
+  <text x="100" y="970" fill="rgba(26,26,26,0.6)" font-size="20" font-weight="700" letter-spacing="2">SUBJECT</text>
+  <rect x="100" y="990" width="970" height="88" rx="24" fill="#FFFFFF" stroke="rgba(26,26,26,0.1)" stroke-width="2"/>
+  <text x="135" y="1043" fill="#1A1A1A" font-size="32" font-weight="700">Physics (0625)</text>
+  <path d="M 1020 1025 L 1030 1040 L 1040 1025" stroke="#1A1A1A" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Paper cards section -->
+  <text x="100" y="1150" fill="rgba(26,26,26,0.3)" font-size="22" font-weight="900" letter-spacing="4">AVAILABLE PAPERS</text>
+  <line x1="440" y1="1143" x2="1070" y2="1143" stroke="rgba(26,26,26,0.05)" stroke-width="1"/>
+  
+  <!-- Paper card 1 -->
+  <rect x="100" y="1190" width="970" height="240" rx="32" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2"/>
+  <text x="140" y="1245" fill="#1A1A1A" font-size="38" font-weight="900">0625 W25 Paper 11</text>
+  <text x="140" y="1285" fill="rgba(26,26,26,0.6)" font-size="26" font-weight="600">40 Questions · 75 min · Theory</text>
+  
+  <!-- Stats badges -->
+  <rect x="140" y="1320" width="190" height="42" rx="21" fill="rgba(209,221,194,0.15)" stroke="rgba(209,221,194,0.3)" stroke-width="1.5"/>
+  <text x="165" y="1347" fill="#1A1A1A" font-size="22" font-weight="700">🎯 214 attempts</text>
+  
+  <rect x="350" y="1320" width="160" height="42" rx="21" fill="rgba(244,240,107,0.15)" stroke="rgba(244,240,107,0.4)" stroke-width="1.5"/>
+  <text x="375" y="1347" fill="#1A1A1A" font-size="22" font-weight="700">⭐ Trending</text>
+  
+  <!-- Load button -->
+  <rect x="140" y="1378" width="900" height="42" rx="21" fill="#D1DDC2" stroke="rgba(26,26,26,0.15)" stroke-width="2"/>
+  <text x="520" y="1405" fill="#1A1A1A" font-size="22" font-weight="800" letter-spacing="1.8">LOAD PAPER</text>
+  
+  <!-- Paper card 2 -->
+  <rect x="100" y="1465" width="970" height="240" rx="32" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2"/>
+  <text x="140" y="1520" fill="#1A1A1A" font-size="38" font-weight="900">0625 W24 Paper 12</text>
+  <text x="140" y="1560" fill="rgba(26,26,26,0.6)" font-size="26" font-weight="600">40 Questions · 75 min · Theory</text>
+  
+  <!-- Stats badges -->
+  <rect x="140" y="1595" width="190" height="42" rx="21" fill="rgba(209,221,194,0.15)" stroke="rgba(209,221,194,0.3)" stroke-width="1.5"/>
+  <text x="165" y="1622" fill="#1A1A1A" font-size="22" font-weight="700">🎯 189 attempts</text>
+  
+  <!-- Load button -->
+  <rect x="140" y="1653" width="900" height="42" rx="21" fill="#D1DDC2" stroke="rgba(26,26,26,0.15)" stroke-width="2"/>
+  <text x="520" y="1680" fill="#1A1A1A" font-size="22" font-weight="800" letter-spacing="1.8">LOAD PAPER</text>
+  
+  <!-- Offline library banner -->
+  <rect x="100" y="1750" width="970" height="140" rx="32" fill="rgba(26,26,26,0.95)"/>
+  <text x="140" y="1810" fill="#FDFBF7" font-size="32" font-weight="900">📥 Offline Library</text>
+  <text x="140" y="1850" fill="rgba(253,251,247,0.7)" font-size="24" font-weight="600">Download papers for offline practice</text>
+  
+  <!-- Bottom navigation (mobile style) -->
+  <rect x="60" y="2340" width="1050" height="110" fill="#FDFBF7" stroke-width="0"/>
+  <line x1="60" y1="2340" x2="1110" y2="2340" stroke="rgba(26,26,26,0.05)" stroke-width="2"/>
+  
+  <!-- Nav items -->
+  <!-- Practice (active) -->
+  <g>
+    <rect x="180" y="2365" width="60" height="60" rx="16" fill="rgba(209,221,194,0.2)"/>
+    <circle cx="210" cy="2385" r="8" fill="#D1DDC2"/>
+    <rect x="208" y="2395" width="4" height="12" fill="#D1DDC2"/>
+    <text x="210" y="2430" fill="#1A1A1A" font-size="18" font-weight="800" text-anchor="middle" letter-spacing="1">PRACTICE</text>
+  </g>
+  
+  <!-- Topicals -->
+  <g opacity="0.35">
+    <rect x="490" y="2365" width="60" height="60" rx="16"/>
+    <rect x="510" y="2375" width="20" height="20" rx="4" fill="#1A1A1A"/>
+    <text x="520" y="2430" fill="#1A1A1A" font-size="18" font-weight="800" text-anchor="middle" letter-spacing="1">TOPICALS</text>
+  </g>
+  
+  <!-- Ranked -->
+  <g opacity="0.35">
+    <rect x="800" y="2365" width="60" height="60" rx="16"/>
+    <polygon points="830,2380 820,2405 840,2405" fill="#1A1A1A"/>
+    <text x="830" y="2430" fill="#1A1A1A" font-size="18" font-weight="800" text-anchor="middle" letter-spacing="1">RANKED</text>
+  </g>
+</svg>

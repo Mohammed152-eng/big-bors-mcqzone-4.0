@@ -1,0 +1,12 @@
+node_modules/
+.env
+tmp/
+/tmp/
+
+# Ensure public assets are ALWAYS tracked by Git
+!public/
+!public/*.png
+!public/*.jpg
+!public/*.svg
+!public/*.webp
+!public/*.ico

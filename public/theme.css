@@ -1,0 +1,146 @@
+/* =========================================================
+   MCQZONE Custom Brand Theme - Ultra Petroleum Blue & Near-Black Navy
+   ========================================================= */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:ital,wght@0,400..800;1,400..800&display=swap');
+
+:root, :host {
+  /* Font Family Stacks */
+  --font-plus-jakarta: 'Plus Jakarta Sans', 'Outfit', system-ui, -apple-system, sans-serif;
+  --font-jetbrains-mono: 'JetBrains Mono', monospace;
+  --font-sans: var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
+  --font-display: var(--font-plus-jakarta), sans-serif;
+
+  /* Custom Color System */
+  --color-near-black-navy: #060d17;
+  --color-almost-black: #03070e;
+  --color-dark-blue-gray: #0b1524;
+  --color-dark-gray: #152238;
+  --color-off-white: #f3f7fb;
+  --color-gray: #5e718d;
+  --color-bright-blue: #0284c7;
+  --color-blue: #0369a1;
+  --color-very-dark-warm-black: #040912;
+  --color-dark-charcoal: #0e1b2e;
+  --color-charcoal: #182b45;
+  --color-muted-gray: #829ab3;
+  --color-white: #ffffff;
+  --color-warm-gray: #94a9bf;
+  --color-muted-bright-blue: #38bdf8;
+  --color-mustard: #f59e0b;
+  --color-yellow: #fbbf24;
+
+  /* Theme System Variable Mapping */
+  --color-boutique-cream: #f3f7fb;
+  --color-boutique-ink: #060d17;
+  --color-boutique-sage: #bae6fd;
+  --color-boutique-sage-deep: #0284c7;
+  --color-boutique-coral: #38bdf8;
+  --color-boutique-coral-deep: #0369a1;
+  --color-boutique-highlighter: #f59e0b;
+  --color-boutique-lavender: #7dd3fc;
+  --color-boutique-sky: #38bdf8;
+
+  /* Dark Mode Surfaces */
+  --color-dark-bg: #040912;
+  --color-dark-surface: #0b1524;
+  --color-dark-elevated: #122036;
+
+  /* UI Feedback */
+  --color-success: #38bdf8;
+  --color-success-strong: #0284c7;
+  --color-error: #f43f5e;
+  --color-error-strong: #be123c;
+  --color-warning: #f59e0b;
+  --color-warning-strong: #d97706;
+  --color-info: #38bdf8;
+  --color-info-strong: #0284c7;
+  --color-flag: #7dd3fc;
+
+  /* Leaderboard & Achievements */
+  --color-rank-gold: #f59e0b;
+  --color-rank-silver: #829ab3;
+  --color-rank-bronze: #d97706;
+
+  /* Shadows tuned to Near-Black Navy and Petroleum highlights */
+  --shadow-sticker-sm: 2px 2px 0px 0px #060d17;
+  --shadow-sticker: 4px 4px 0px 0px #060d17;
+  --shadow-sticker-lift: 6px 6px 0px 0px #060d17;
+  --shadow-sticker-soft: 4px 4px 0px 0px rgba(6, 13, 23, 0.22);
+  --shadow-sticker-soft-lift: 6px 6px 0px 0px rgba(6, 13, 23, 0.32);
+  --shadow-card: 8px 8px 0px 0px rgba(6, 13, 23, 0.08);
+  --shadow-card-hover: 12px 12px 0px 0px rgba(6, 13, 23, 0.14);
+  --shadow-modal: 12px 12px 0px 0px #060d17;
+  --shadow-sticker-dark: 0px 2px 10px 0px rgba(2, 6, 23, 0.8), 0px 0px 0px 1px rgba(56, 189, 248, 0.25);
+  --shadow-card-dark: 0px 4px 28px -4px rgba(2, 6, 23, 0.85), 0px 0px 0px 1px rgba(56, 189, 248, 0.18);
+  --shadow-card-dark-hover: 0px 8px 36px -4px rgba(2, 6, 23, 0.95), 0px 0px 0px 1px rgba(56, 189, 248, 0.35);
+}
+
+/* Base Body Styling */
+body {
+  background-color: var(--color-boutique-cream) !important;
+  color: var(--color-boutique-ink) !important;
+  font-family: var(--font-sans) !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body.dark, html.dark body, .dark {
+  background-color: var(--color-dark-bg) !important;
+  color: #f3f7fb !important;
+}
+
+/* Selection tint */
+::selection {
+  background-color: rgba(56, 189, 248, 0.3) !important;
+  color: inherit !important;
+}
+
+/* Background graph paper with petroleum blue grid */
+.graph-paper {
+  background-image: linear-gradient(rgba(6, 13, 23, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(6, 13, 23, 0.05) 1px, transparent 1px) !important;
+  background-size: 24px 24px !important;
+}
+.dark .graph-paper {
+  background-image: linear-gradient(rgba(56, 189, 248, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(56, 189, 248, 0.05) 1px, transparent 1px) !important;
+}
+
+/* High-contrast Buttons with Petroleum Blue & Near-black Navy Accent */
+.sticker-button {
+  background-color: var(--color-bright-blue) !important;
+  color: #ffffff !important;
+  border-color: var(--color-boutique-ink) !important;
+  box-shadow: var(--shadow-sticker) !important;
+  transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+.sticker-button:hover {
+  background-color: var(--color-blue) !important;
+  box-shadow: var(--shadow-sticker-lift) !important;
+  transform: translate(-1px, -1px);
+}
+.sticker-button:active {
+  box-shadow: var(--shadow-sticker-sm) !important;
+  transform: translate(1px, 1px);
+}
+
+/* Yellow / Mustard Highlight Badges */
+.badge-mustard, [data-badge="highlight"], .bg-boutique-highlighter {
+  background-color: var(--color-mustard) !important;
+  color: var(--color-near-black-navy) !important;
+}
+
+/* Subtle focus indicators */
+*:focus-visible {
+  outline: 2px solid var(--color-muted-bright-blue) !important;
+  outline-offset: 2px !important;
+}
+
+/* Glow accent for dark cards */
+.dark .sticker-card, .dark .paper-sheet {
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(56, 189, 248, 0.12) !important;
+}
+.dark .sticker-card:hover, .dark .paper-sheet:hover {
+  box-shadow: 0 8px 30px -4px rgba(0, 0, 0, 0.8), 0 0 0 1.5px rgba(56, 189, 248, 0.28) !important;
+}
+
+

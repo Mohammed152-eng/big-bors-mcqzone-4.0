@@ -1,0 +1,8 @@
+{
+  "name": "MCQ Zone",
+  "description": "Interactive MCQ practice and exam revision platform for IGCSE and O-Levels",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
