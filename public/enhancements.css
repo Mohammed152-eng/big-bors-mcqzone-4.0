@@ -1,0 +1,262 @@
+/* =========================================================
+   MCQZONE Frontend Enhancements: Bento Grid, Interactive Hero,
+   Floating Dock & Cambridge Subject Color System
+   ========================================================= */
+
+/* Micro-Border & Diffuse Glass Elevation */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(6, 13, 23, 0.08);
+  box-shadow: 0 10px 30px -5px rgba(6, 13, 23, 0.05), 0 4px 12px -2px rgba(6, 13, 23, 0.03);
+  border-radius: 20px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dark .glass-panel {
+  background: rgba(13, 21, 34, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 12px 36px -4px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(56, 189, 248, 0.15);
+}
+
+.glass-panel:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px -6px rgba(6, 13, 23, 0.08), 0 6px 16px -2px rgba(6, 13, 23, 0.04);
+}
+
+.dark .glass-panel:hover {
+  box-shadow: 0 20px 48px -6px rgba(0, 0, 0, 0.85), 0 0 0 1.5px rgba(56, 189, 248, 0.3);
+}
+
+/* Floating Bottom Dock */
+.floating-dock {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(0);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: rgba(6, 13, 23, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 9999px;
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+}
+
+.dark .floating-dock {
+  background: rgba(13, 21, 34, 0.95);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.8), 0 0 20px rgba(56, 189, 248, 0.15);
+}
+
+.floating-dock-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 9999px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #ffffff;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.15s ease;
+  text-decoration: none;
+}
+
+.floating-dock-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-1px);
+}
+
+.floating-dock-btn.active-pill {
+  background: #0284c7;
+  color: #ffffff;
+  box-shadow: 0 2px 10px rgba(2, 132, 199, 0.4);
+}
+
+/* Bento Grid System */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+}
+
+.bento-card-main {
+  grid-column: span 12;
+}
+
+@media (min-width: 768px) {
+  .bento-card-main {
+    grid-column: span 7;
+  }
+  .bento-card-side {
+    grid-column: span 5;
+  }
+  .bento-card-third {
+    grid-column: span 4;
+  }
+  .bento-card-half {
+    grid-column: span 6;
+  }
+}
+
+/* Cambridge Subject Color Pills */
+.subject-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1.5px solid transparent;
+}
+
+.subject-pill.physics {
+  background: #e0f2fe;
+  color: #0369a1;
+  border-color: #7dd3fc;
+}
+.dark .subject-pill.physics {
+  background: rgba(3, 105, 161, 0.25);
+  color: #7dd3fc;
+  border-color: rgba(125, 211, 252, 0.3);
+}
+
+.subject-pill.chemistry {
+  background: #dcfce7;
+  color: #15803d;
+  border-color: #86efac;
+}
+.dark .subject-pill.chemistry {
+  background: rgba(21, 128, 61, 0.25);
+  color: #86efac;
+  border-color: rgba(134, 239, 172, 0.3);
+}
+
+.subject-pill.biology {
+  background: #ffe4e6;
+  color: #be123c;
+  border-color: #fda4af;
+}
+.dark .subject-pill.biology {
+  background: rgba(190, 18, 60, 0.25);
+  color: #fda4af;
+  border-color: rgba(253, 164, 175, 0.3);
+}
+
+.subject-pill.economics {
+  background: #fef3c7;
+  color: #b45309;
+  border-color: #fde68a;
+}
+.dark .subject-pill.economics {
+  background: rgba(180, 83, 9, 0.25);
+  color: #fde68a;
+  border-color: rgba(253, 230, 138, 0.3);
+}
+
+.subject-pill:hover, .subject-pill.active {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+.subject-pill.active {
+  filter: brightness(0.95);
+  outline: 2px solid currentColor;
+}
+
+/* Interactive Option Selection */
+.mcq-option-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: #ffffff;
+  border: 1.5px solid rgba(6, 13, 23, 0.12);
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #060d17;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  text-align: left;
+}
+
+.dark .mcq-option-btn {
+  background: #0d1522;
+  border-color: rgba(255, 255, 255, 0.12);
+  color: #f3f7fb;
+}
+
+.mcq-option-btn:hover {
+  background: #f8fafc;
+  border-color: #0284c7;
+  transform: translateX(2px);
+}
+
+.dark .mcq-option-btn:hover {
+  background: #131f33;
+  border-color: #38bdf8;
+}
+
+.mcq-option-btn.correct {
+  background: #dcfce7 !important;
+  border-color: #16a34a !important;
+  color: #15803d !important;
+  font-weight: 800;
+}
+
+.dark .mcq-option-btn.correct {
+  background: rgba(22, 163, 74, 0.25) !important;
+  border-color: #4ade80 !important;
+  color: #86efac !important;
+}
+
+.mcq-option-btn.incorrect {
+  background: #ffe4e6 !important;
+  border-color: #e11d48 !important;
+  color: #be123c !important;
+}
+
+.dark .mcq-option-btn.incorrect {
+  background: rgba(225, 29, 72, 0.25) !important;
+  border-color: #fb7185 !important;
+  color: #fca5a5 !important;
+}
+
+/* Pulse indicator */
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  background: #10b981;
+  border-radius: 9999px;
+  box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  animation: pulse-ring 1.8s infinite;
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 6px rgba(16, 185, 129, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}

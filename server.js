@@ -82,7 +82,21 @@ const memoryCache = new Map();
 
 // Helper to get or recover an asset buffer
 async function getAssetBuffer(relPath) {
-  const cleanName = relPath.startsWith('/') ? relPath.slice(1) : relPath;
+  let cleanName = relPath.startsWith('/') ? relPath.slice(1) : relPath;
+  if (cleanName.includes('?')) {
+    cleanName = cleanName.split('?')[0];
+  }
+  if (cleanName.includes('#')) {
+    cleanName = cleanName.split('#')[0];
+  }
+
+  // Explicit mappings for TIW banner and logo
+  if (cleanName.includes('banner') && (cleanName.includes('tiw') || cleanName.includes('olevel') || cleanName.includes('workaholic'))) {
+    cleanName = 'tiw-banner-new.png';
+  } else if (cleanName.includes('logo') && (cleanName.includes('tiw') || cleanName.includes('olevel') || cleanName.includes('workaholic'))) {
+    cleanName = 'tiw-logo.png';
+  }
+
   if (memoryCache.has(cleanName)) {
     return memoryCache.get(cleanName);
   }
@@ -181,7 +195,7 @@ app.get('/_next/image', async (req, res) => {
     const buf = await getAssetBuffer(cleanPath);
     if (buf) {
       res.setHeader('Content-Type', getContentType(cleanPath, buf));
-      res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+      res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
       return res.send(buf);
     }
   }
@@ -190,6 +204,7 @@ app.get('/_next/image', async (req, res) => {
   const ogBuf = await getAssetBuffer('og-image.png');
   if (ogBuf) {
     res.setHeader('Content-Type', 'image/png');
+    res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
     return res.send(ogBuf);
   }
   res.status(404).end();
@@ -201,7 +216,7 @@ app.get(/\.(png|jpg|jpeg|webp|svg|ico|woff2?)$/i, async (req, res, next) => {
   const buf = await getAssetBuffer(cleanPath);
   if (buf) {
     res.setHeader('Content-Type', getContentType(cleanPath, buf));
-    res.setHeader('Cache-Control', 'public, max-age=86400');
+    res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
     return res.send(buf);
   }
   next();
